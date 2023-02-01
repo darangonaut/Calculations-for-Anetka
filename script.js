@@ -1,14 +1,17 @@
 
 let correctAnswer;
+let allCorrect = 0;
+let council = 0;
+
 function generateQuestion() {
-    const num1 = Math.floor(Math.random() * 20) + 1;
-    const num2 = Math.floor(Math.random() * 20) + 1;
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
     correctAnswer = num1 + num2;
     document.getElementById("example").innerHTML = `${num1} + ${num2} =`;
 
     const answers = [correctAnswer];
     while (answers.length < 4) {
-        const randomAnswer = Math.floor(Math.random() * 40) + 1;
+        const randomAnswer = Math.floor(Math.random() * 20) + 1;
         if (!answers.includes(randomAnswer)) {
             answers.push(randomAnswer);
         }
@@ -44,8 +47,14 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         if (Number(button.innerHTML) === correctAnswer) {
             generateQuestion();
+            allCorrect++;
+            document.getElementById("js-all-correct").innerHTML = allCorrect;
+            council++;
+            document.getElementById("js-council").innerHTML = council;
         } else {
             button.style.backgroundColor = "#931010";
+            council = 0;
+            document.getElementById("js-council").innerHTML = council;
         }
     });
 });
