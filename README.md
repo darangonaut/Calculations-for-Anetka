@@ -4,7 +4,7 @@ This project creates a simple addition calculator for numbers up to 20. Upon loa
 
 ## Technologies used in the project
 - HTML
-- CSS
+- Tailwindcss
 - JavaScript
 
 ## How to run the project
