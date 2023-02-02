@@ -10,3 +10,6 @@ This project creates a simple addition calculator for numbers up to 20. Upon loa
 ## How to run the project
 1. Download or copy the source code of this project
 2. Open the `index.html` file in a browser
+
+## Run Tailwindcss in development mode
+- npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify
