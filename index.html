@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculations for Anetka</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/dist/output.css" rel="stylesheet">
+
 
 </head>
 <body class="h-screen">
-    <div class="bg-gray-200 p-4 h-screen">
-      <h2 class="text-center mb-2">Celkový počet správných odpovědí: <span id="js-all-correct">0</span></h2>
-      <h2 class="text-center mb-8">Aktuální rada bez chyby: <span id="js-council">0</span></h2>
+    <div class="bg-gray-200 p-8 h-screen">
+      <h2 class="text-xl text-center mb-2">Celkový počet správných odpovědí: <span id="js-all-correct" class="font-bold">0</span></h2>
+      <h2 class="text-xl text-center mb-8">Aktuální rada bez chyby: <span id="js-council" class="font-bold">0</span></h2>
         <h1 id="example" class="text-6xl font-bold text-center"></h1>
         <div class="grid gap-8 grid-cols-2 mt-8 md:max-w-[50%] md:mx-auto">
-          <button id="answer-1" class=" text-5xl p-8 bg-blue-500 text-white rounded-lg hover:bg-blue-600"></button>
-          <button id="answer-2" class=" text-5xl p-8 bg-blue-500 text-white rounded-lg hover:bg-blue-600 "></button>
-          <button id="answer-3" class=" text-5xl p-8 bg-blue-500 text-white rounded-lg hover:bg-blue-600 "></button>
-          <button id="answer-4" class=" text-5xl p-8 bg-blue-500 text-white rounded-lg hover:bg-blue-600 "></button>
+          <button id="answer-1" class="btn"></button>
+          <button id="answer-2" class="btn"></button> 
+          <button id="answer-3" class="btn"></button>
+          <button id="answer-4" class="btn"></button>
         </div>
       </div>
         
