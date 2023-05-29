@@ -4,10 +4,16 @@ let allCorrect = 0;
 let council = 0;
 
 function generateQuestion() {
-    const num1 = Math.floor(Math.random() * 10) + 1;
-    const num2 = Math.floor(Math.random() * 10) + 1;
-    correctAnswer = num1 + num2;
-    document.getElementById("example").innerHTML = `${num1} + ${num2} =`;
+    // const num1 = Math.floor(Math.random() * 10) + 1;
+    // const num2 = Math.floor(Math.random() * 10) + 1;
+
+    let num1 = getNumber(1, null);
+    let num2 = getNumber(2, num1);
+    
+    correctAnswer = num1 - num2;
+
+    document.getElementById("example").innerHTML = `${num1} - ${num2} =`;
+    
 
     const answers = [correctAnswer];
     while (answers.length < 4) {
@@ -58,3 +64,15 @@ buttons.forEach(button => {
         }
     });
 });
+
+function getNumber(bigger, smoller){
+    if(bigger == 1){
+        return Math.floor(Math.random() * 10) + 10;
+    }else{
+        let number = Math.floor(Math.random() * 10) + 1;
+        while(number >= smoller){
+            number = Math.floor(Math.random() * 10) + 1;
+        }
+        return number;
+    }
+}
