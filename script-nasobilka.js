@@ -4,28 +4,19 @@ let allCorrect = 0;
 let council = 0;
 
 function generateQuestion() {
-
-
     const num1Array = [1, 2, 3, 4, 5];
     const num2Array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    //const num1 = Math.floor(Math.random() * 10) + 1;
-    //const num2 = Math.floor(Math.random() * 10) + 1;
-
     const num1 = num1Array[Math.floor(Math.random() * num1Array.length)];
     const num2 = num2Array[Math.floor(Math.random() * num2Array.length)];
-
     
     correctAnswer = num1 * num2;
 
     document.getElementById("example").innerHTML = `${num1} x ${num2} =`;
     
-
     const answers = [correctAnswer];
-    console.log(correctAnswer);
+    
     while (answers.length < 4) {
-        
-        //vytvor nahodne cislo ktore ale nebude rovnake ako spravna odpoved a bude to nasobok num1 a nebude sa opakovat
         const randomAnswer = getRandomAnswer(num1, num2, correctAnswer);
 
         if (!answers.includes(randomAnswer)) {
@@ -97,6 +88,5 @@ function getRandomAnswer(num1, num2, correctAnswer){
             randomAnswer = num1 * getNumber(num2, num1);
         }
     }
-    console.log(randomAnswer);
     return randomAnswer;
 }
